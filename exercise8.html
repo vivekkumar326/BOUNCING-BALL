@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-transition</title>
+</head>
+<style>
+    .container{
+        background-color: antiquewhite;
+        width:100vw;
+        height: 100vh;
+        
+    }
+    .box{
+        
+        background-color: rgb(255, 0, 0);
+        width: 100px;
+        height: 100px;
+     position: absolute;
+     bottom:0;
+     left: 0;
+        border-radius: 100px;
+        /* animation-name: myanimation;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 2s;
+        animation-direction:normal;
+        animation-iteration-count: infinite;
+         */
+         animation: leftside 1s ease-out infinite alternate ,upperside 3s linear infinite;
+        }
+       @keyframes upperside {
+        from{ 
+            left:0
+        }
+        to{ 
+            background-color: green;
+            left:100%
+        }
+        
+       }
+       @keyframes leftside {
+        from{ 
+            bottom:0;
+        }
+        to{ 
+            
+            background-color: cadetblue;
+            bottom:100%;
+        }
+    
+       
+</style>
+<body>
+    <div class="container">
+        <div class="box  translate">
+
+        </div>
+    </div>
+    
+</body>
+</html>
